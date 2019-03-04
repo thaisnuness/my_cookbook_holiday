@@ -1,3 +1,12 @@
+<% if @recipe.errors.any? %>
+  <ul>
+    <% @recipe.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @recipe do |f| %>
   <%= f.label :title, 'Título'%>
   <%= f.text_field :title %>
