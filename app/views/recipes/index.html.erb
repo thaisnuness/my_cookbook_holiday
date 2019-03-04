@@ -4,7 +4,7 @@
 
 
 <% @recipes.each do |recipe| %>
-    <h1><%= recipe.title %></h1>
+    <h1><%= link_to recipe.title, recipe %></h1>
     <ul>
         <li><%= recipe.recipe_type %></li>
         <li><%= recipe.cuisine %></li>
