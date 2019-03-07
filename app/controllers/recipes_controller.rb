@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
 	def index
 		@recipes = Recipe.all
+		@recipe_types = Recipe.all
 	end
 
 	def show
@@ -36,7 +37,7 @@ class RecipesController < ApplicationController
 	
   private
     def recipe_params
-        params.require(:recipe).permit(:title, :recipe_type, :cuisine, :difficulty, 
+        params.require(:recipe).permit(:title, :recipe_type_id, :cuisine, :difficulty, 
                                         :cook_time, :ingredients, :cook_method)
     end
 end
