@@ -11,8 +11,8 @@
   <%= f.text_field :title %>
   <%= f.label :recipe_type_id, 'Tipo da Receita'%>
   <%= f.collection_select(:recipe_type_id, RecipeType.all, :id, :name) %>
-  <%= f.label :cuisine, 'Cozinha'%>
-  <%= f.text_field :cuisine %>
+  <%= f.label :cuisine_id, 'Cozinha'%>
+  <%= f.collection_select(:cuisine_id, Cuisine.all, :id, :name) %>
   <%= f.label :difficulty, 'Dificuldade'%>
   <%= f.text_field :difficulty %>
   <%= f.label :cook_time, 'Tempo de Preparo'%>
@@ -20,7 +20,6 @@
   <%= f.label :ingredients, 'Ingredientes'%>
   <%= f.text_field :ingredients %>
   <%= f.label :cook_method, 'Como Preparar'%>
-  <%= f.text_field :cook_method %>
-  
+  <%= f.text_field :cook_method %>  
   <%= f.submit 'Enviar' %>
 <% end %>
